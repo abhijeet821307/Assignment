@@ -2,7 +2,7 @@ import csv
 import matplotlib.pyplot as plt
 
 def batch_add():
-    with open("STUDENTS.csv", "a",newline="") as obj:
+    with open("Batch.csv", "a",newline="") as obj:
         wobj=csv.writer(obj)
         while True:
             id=input("Enter Batch ID ")
@@ -41,7 +41,7 @@ def batch_add():
                 break
 
 def display_students():
-    with open("STUDENTS.csv", "r") as obj:
+    with open("Batch.csv", "r") as obj:
         obj.seek(0)
         robj = csv.reader(obj)
         for i in robj:
@@ -49,7 +49,7 @@ def display_students():
                 print(i)
 
 def display_courses():
-    with open("STUDENTS.csv", "r") as obj:
+    with open("Batch.csv", "r") as obj:
         obj.seek(0)
         robj = csv.reader(obj)
         for i in robj:
@@ -59,7 +59,7 @@ def display_courses():
 def pie_chart():
     name=[]
     marks=[]
-    with open("STUDENTS.csv", "r") as obj:
+    with open("Batch.csv", "r") as obj:
         obj.seek(0)
         robj = csv.reader(obj)
         for i in robj:
